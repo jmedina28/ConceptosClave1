@@ -36,4 +36,6 @@ print("El vector BA es el siguiente: " + str(A.vector(B).pantalla()))
 print("La distancia entre A y B es de: " + str(A.distancia(B)))
 print("La distancia entre B y A es de: " + str(B.distancia(A)))
 # Rectángulo con vértices A y B
+print("La base del rectángulo AB es de: " + str(Rectangulo(A,B).base()))
+print("La altura del rectángulo AB es de: " + str(Rectangulo(A,B).altura()))
 print("El área del rectángulo que forma la diagonal AB es la siguiente: " + str(Rectangulo(A, B).area()))
