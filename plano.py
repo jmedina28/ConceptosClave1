@@ -35,14 +35,14 @@ class Punto:
     def distancia(self, punto):
         return ((self.x - punto.x)**2 + (self.y - punto.y)**2)**0.5
    
-x1 = int(input("Ingrese el valor de x1: "))
-y1 = int(input("Ingrese el valor de y1: "))
+x1 = 0
+y1 = 0
 
 print(Punto(x1,y1).pantalla())
 print(Punto(x1,y1).cuadrante())
 
-x2 = int(input("Ingrese el valor de x2: "))
-y2 = int(input("Ingrese el valor de x2: "))
+x2 = 5
+y2 = 5
 
 print(Punto(x2,y2).pantalla())
 print(Punto(x2,y2).cuadrante())
@@ -64,10 +64,27 @@ class Rectangulo:
     def altura(self):
         return abs(self.punto1.y - self.punto2.y)
 
-x1 = int(input("Ingrese el valor de x1: "))
-y1 = int(input("Ingrese el valor de y1: "))
-x2 = int(input("Ingrese el valor de x2: "))
-y2 = int(input("Ingrese el valor de x2: ")) 
+x1 = 0
+y1 = 0
+print(Punto(x1,y1).pantalla())
+x2 = 5
+y2 = 5
+print(Punto(x2,y2).pantalla())
 print("El área del rectángulo es: " + str(Rectangulo(Punto(x1,y1), Punto(x2,y2)).area()))
 print("La base del rectángulo mide: " + str(Rectangulo(Punto(x1,y1), Punto(x2,y2)).base()))
 print("La altura del rectángulo mide: " + str(Rectangulo(Punto(x1,y1), Punto(x2,y2)).altura()))
+
+A = Punto(2,3)
+B = Punto(5,5)
+C = Punto(-3,-1)
+D = Punto(0,0)
+print(A.pantalla()), print(A.cuadrante())
+print(B.pantalla()), print(B.cuadrante())
+print(C.pantalla()), print(C.cuadrante())
+print(D.pantalla()), print(D.cuadrante())
+print(A.vector(B).pantalla())
+print(B.vector(A).pantalla())
+print(A.distancia(B))
+print(B.distancia(A))
+# Rectángulo con vértices A y B
+print(Rectangulo(A, B).area())
