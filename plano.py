@@ -1,3 +1,6 @@
+from re import X
+
+
 class Punto:
     def __init__(self, x, y):
         self.x = x
@@ -31,11 +34,22 @@ class Punto:
     
     def distancia(self, punto):
         return ((self.x - punto.x)**2 + (self.y - punto.y)**2)**0.5
+   
+x1 = int(input("Ingrese el valor de x1: "))
+y1 = int(input("Ingrese el valor de y1: "))
 
-print(Punto(1,2).pantalla())
-print(Punto(1,2).cuadrante())
-print(Punto(1,2).vector(Punto(3,4)).pantalla())
-print(Punto(1,1).distancia(Punto(5,1)))
+print(Punto(x1,y1).pantalla())
+print(Punto(x1,y1).cuadrante())
+
+x2 = int(input("Ingrese el valor de x2: "))
+y2 = int(input("Ingrese el valor de x2: "))
+
+print(Punto(x2,y2).pantalla())
+print(Punto(x2,y2).cuadrante())
+
+print("El vector que forman los dos puntos es el siguiente: " + str(Punto(x1,y1).vector(Punto(x2,y2)).pantalla()))
+print("La distancia entre los dos puntos es de: " + str(Punto(x1,y1).distancia(Punto(x2,y2))))
+
 class Rectangulo:
     def __init__(self, punto1, punto2):
         self.punto1 = punto1
@@ -50,6 +64,10 @@ class Rectangulo:
     def altura(self):
         return abs(self.punto1.y - self.punto2.y)
 
-print(Rectangulo(Punto(1,1), Punto(5,5)).area())
-print(Rectangulo(Punto(1,1), Punto(5,5)).base())
-print(Rectangulo(Punto(1,1), Punto(5,5)).altura())
+x1 = int(input("Ingrese el valor de x1: "))
+y1 = int(input("Ingrese el valor de y1: "))
+x2 = int(input("Ingrese el valor de x2: "))
+y2 = int(input("Ingrese el valor de x2: ")) 
+print("El área del rectángulo es: " + str(Rectangulo(Punto(x1,y1), Punto(x2,y2)).area()))
+print("La base del rectángulo mide: " + str(Rectangulo(Punto(x1,y1), Punto(x2,y2)).base()))
+print("La altura del rectángulo mide: " + str(Rectangulo(Punto(x1,y1), Punto(x2,y2)).altura()))
