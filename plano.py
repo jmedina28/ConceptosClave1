@@ -43,5 +43,13 @@ class Rectangulo:
 
     def area(self):
         return abs(self.punto1.x - self.punto2.x) * abs(self.punto1.y - self.punto2.y)
+    
+    def base(self):
+        return abs(self.punto1.x - self.punto2.x)
+    
+    def altura(self):
+        return abs(self.punto1.y - self.punto2.y)
 
 print(Rectangulo(Punto(1,1), Punto(5,5)).area())
+print(Rectangulo(Punto(1,1), Punto(5,5)).base())
+print(Rectangulo(Punto(1,1), Punto(5,5)).altura())
