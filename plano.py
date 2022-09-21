@@ -12,19 +12,27 @@ class Punto:
     def cuadrante(self):
   
         if self.x == 0:
-            return "El punto se encuentra sobre el eje x"
+            return "El punto se encuentra sobre el eje x."
         elif self.y == 0:
-            return "El punto se encuentra sobre el eje y"
+            return "El punto se encuentra sobre el eje y."
         elif self.x > 0 and self.y > 0:
-            return "El punto se encuentra en el primer cuadrante"
+            return "El punto se encuentra en el primer cuadrante."
         elif self.x < 0 and self.y > 0:
-            return "El punto se encuentra en el segundo cuadrante"
+            return "El punto se encuentra en el segundo cuadrante."
         elif self.x < 0 and self.y < 0:
-            return "El punto se encuentra en el tercer cuadrante"
+            return "El punto se encuentra en el tercer cuadrante."
         elif self.x > 0 and self.y < 0:
-            return "El punto se encuentra en el cuarto cuadrante"
+            return "El punto se encuentra en el cuarto cuadrante."
         else:
-            return "El punto se encuentra en el origen"
+            return "El punto se encuentra en el origen de coordenadas."
+
+    def vector(self, punto):
+        return Punto(self.x - punto.x, self.y - punto.y)
+    
+    def distancia(self, punto):
+        return ((self.x - punto.x)**2 + (self.y - punto.y)**2)**0.5
 
 print(Punto(1,2).pantalla())
 print(Punto(1,2).cuadrante())
+print(Punto(1,2).vector(Punto(3,4)).pantalla())
+print(Punto(1,1).distancia(Punto(5,1)))
