@@ -1,8 +1,8 @@
 
 from plano import Punto, Rectangulo
 
-x1 = 0
-y1 = 0
+x1 = 1
+y1 = 1
 print(Punto(x1,y1).pantalla())
 print(Punto(x1,y1).cuadrante())
 x2 = 5
@@ -12,8 +12,8 @@ print(Punto(x2,y2).cuadrante())
 print("El vector que forman los dos puntos es el siguiente: " + str(Punto(x1,y1).vector(Punto(x2,y2)).pantalla()))
 print("La distancia entre los dos puntos es de: " + str(Punto(x1,y1).distancia(Punto(x2,y2))))
 
-x1 = 0
-y1 = 0
+x1 = 2
+y1 = 2
 print(Punto(x1,y1).pantalla())
 x2 = 5
 y2 = 5
