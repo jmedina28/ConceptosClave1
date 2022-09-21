@@ -36,3 +36,12 @@ print(Punto(1,2).pantalla())
 print(Punto(1,2).cuadrante())
 print(Punto(1,2).vector(Punto(3,4)).pantalla())
 print(Punto(1,1).distancia(Punto(5,1)))
+class Rectangulo:
+    def __init__(self, punto1, punto2):
+        self.punto1 = punto1
+        self.punto2 = punto2
+
+    def area(self):
+        return abs(self.punto1.x - self.punto2.x) * abs(self.punto1.y - self.punto2.y)
+
+print(Rectangulo(Punto(1,1), Punto(5,5)).area())
